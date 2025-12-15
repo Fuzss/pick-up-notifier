@@ -1,0 +1,61 @@
+{
+    "mod": {
+        "id": "pickupnotifier",
+        "group": "fuzs.pickupnotifier",
+        "name": "Pick Up Notifier",
+        "version": "21.11.0",
+        "authors": [
+            "Fuzs"
+        ],
+        "description": "Be notified about all the things you've just collected.",
+        "license": "MPL-2.0"
+    },
+    "dependencies": [
+        {
+            "name": "fabricapi",
+            "type": "required",
+            "platforms": [
+                "fabric"
+            ]
+        },
+        {
+            "name": "forgeconfigapiport",
+            "type": "required",
+            "platforms": [
+                "fabric"
+            ]
+        },
+        {
+            "name": "puzzleslib",
+            "type": "required",
+            "platforms": [
+                "fabric",
+                "neoforge"
+            ]
+        }
+    ],
+    "links": [
+        {
+            "name": "github",
+            "slug": "pickupnotifier"
+        },
+        {
+            "name": "curseforge",
+            "slug": "pick-up-notifier",
+            "id": "351441"
+        },
+        {
+            "name": "modrinth",
+            "slug": "pick-up-notifier",
+            "id": "ZX66K16c"
+        }
+    ],
+    "environments": {
+        "client": "required",
+        "server": "unsupported"
+    },
+    "platforms": [
+        "fabric",
+        "neoforge"
+    ]
+}

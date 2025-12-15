@@ -4,21 +4,21 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import fuzs.pickupnotifier.PickUpNotifier;
 import fuzs.pickupnotifier.config.ClientConfig;
 import fuzs.pickupnotifier.config.CombineEntries;
-import fuzs.puzzleslib.api.core.v1.utility.ResourceLocationHelper;
+import net.minecraft.resources.Identifier;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.renderer.entity.state.ExperienceOrbRenderState;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.item.Rarity;
 
 public final class ExperienceDisplayEntry extends DisplayEntry<Component> {
-    private static final ResourceLocation EXPERIENCE_ORB_TEXTURES = ResourceLocationHelper.withDefaultNamespace(
+    private static final Identifier EXPERIENCE_ORB_TEXTURES = Identifier.withDefaultNamespace(
             "textures/entity/experience_orb.png");
 
     private int tickCount;

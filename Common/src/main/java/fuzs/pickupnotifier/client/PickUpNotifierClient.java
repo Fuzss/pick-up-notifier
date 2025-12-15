@@ -17,7 +17,7 @@ public class PickUpNotifierClient implements ClientModConstructor {
 
     private static void registerEventHandlers() {
         ClientTickEvents.END.register(DrawEntriesHandler.INSTANCE::onClientTick);
-        ClientPlayerNetworkEvents.LOGGED_OUT.register(DrawEntriesHandler.INSTANCE::onLoggedOut);
+        ClientPlayerNetworkEvents.LEAVE.register(DrawEntriesHandler.INSTANCE::onPlayerLeave);
         ClientPlayerCopyCallback.EVENT.register(DrawEntriesHandler.INSTANCE::onCopy);
     }
 

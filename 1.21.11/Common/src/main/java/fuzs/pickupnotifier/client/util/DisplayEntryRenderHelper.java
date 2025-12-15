@@ -8,7 +8,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.ARGB;
 import net.minecraft.world.item.ItemStack;
 
@@ -16,8 +16,8 @@ import java.util.Map;
 import java.util.NavigableMap;
 
 public class DisplayEntryRenderHelper {
-    private static final ResourceLocation BACKGROUND_SPRITE = ResourceLocation.withDefaultNamespace("tooltip/background");
-    private static final ResourceLocation FRAME_SPRITE = ResourceLocation.withDefaultNamespace("tooltip/frame");
+    private static final Identifier BACKGROUND_SPRITE = Identifier.withDefaultNamespace("tooltip/background");
+    private static final Identifier FRAME_SPRITE = Identifier.withDefaultNamespace("tooltip/frame");
     private static final NavigableMap<Integer, Character> MAP = ImmutableSortedMap.<Integer, Character>naturalOrder()
             .put(1_000, 'K')
             .put(1_000_000, 'M')
@@ -67,7 +67,7 @@ public class DisplayEntryRenderHelper {
 
     /**
      * @see net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil#renderTooltipBackground(GuiGraphics,
-     *         int, int, int, int, int, ResourceLocation)
+     *         int, int, int, int, int, Identifier)
      */
     public static void renderTooltipBackground(GuiGraphics guiGraphics, int x, int y, int width, int height, int color) {
         int i = x - 3 - 9;

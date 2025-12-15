@@ -149,7 +149,7 @@ public class DrawEntriesHandler {
         }
     }
 
-    public void onLoggedOut(LocalPlayer player, MultiPlayerGameMode multiPlayerGameMode, Connection connection) {
+    public void onPlayerLeave(LocalPlayer player, MultiPlayerGameMode multiPlayerGameMode, Connection connection) {
         this.collector.clear();
     }
 

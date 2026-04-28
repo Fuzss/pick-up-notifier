@@ -4,21 +4,24 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import fuzs.pickupnotifier.common.PickUpNotifier;
 import fuzs.pickupnotifier.common.config.ClientConfig;
 import fuzs.pickupnotifier.common.config.CombineEntries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.renderer.entity.state.ExperienceOrbRenderState;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.item.Rarity;
 
 public final class ExperienceDisplayEntry extends DisplayEntry<Component> {
-    private static final Identifier EXPERIENCE_ORB_TEXTURES = Identifier.withDefaultNamespace(
-            "textures/entity/experience_orb.png");
+    /**
+     * @see net.minecraft.client.renderer.entity.ExperienceOrbRenderer#EXPERIENCE_ORB_LOCATION
+     */
+    private static final Identifier EXPERIENCE_ORB_LOCATION = Identifier.withDefaultNamespace(
+            "textures/entity/experience/experience_orb.png");
 
     private int tickCount;
 
@@ -52,7 +55,7 @@ public final class ExperienceDisplayEntry extends DisplayEntry<Component> {
         int textureY = textureOffset / 4 * 16;
         int textureColor = getExperienceOrbColor(this.tickCount / 2.0F, ARGB.as8BitChannel(alpha));
         guiGraphics.blit(RenderPipelines.GUI_TEXTURED,
-                EXPERIENCE_ORB_TEXTURES,
+                EXPERIENCE_ORB_LOCATION,
                 posX,
                 posY,
                 textureX,
@@ -70,8 +73,7 @@ public final class ExperienceDisplayEntry extends DisplayEntry<Component> {
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;
-        } else if (PickUpNotifier.CONFIG.get(ClientConfig.class).behavior.combineEntries
-                != CombineEntries.NEVER) {
+        } else if (PickUpNotifier.CONFIG.get(ClientConfig.class).behavior.combineEntries != CombineEntries.NEVER) {
             return obj instanceof ExperienceDisplayEntry;
         } else {
             return false;

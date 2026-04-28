@@ -1,58 +1,96 @@
 # Pick Up Notifier
 
-A Minecraft mod. Downloads can be found on CurseForge.
+### Minecraft 26.x
 
-![](https://raw.githubusercontent.com/Fuzss/modresources/main/pages/data/pickupnotifier/banner.png)
+| Branch | Status | Changelog | Fabric | NeoForge |
+| --- | --- | --- | --- | --- |
+| [26.1.x](https://github.com/Fuzss/pick-up-notifier/tree/26.1.x) | ✅&nbsp;Primary | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/26.1.x/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier/files/all?version=26.1&gameVersionTypeId=4)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/pick-up-notifier/versions?g=26.1&l=fabric) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier/files/all?version=26.1&gameVersionTypeId=6)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/pick-up-notifier/versions?g=26.1&l=neoforge) |
 
-## Configuration
-Apart from all the display settings found in the `.minecraft/config/pickupnotifier/pickupnotifier-client.toml` file, Pick Up Notifier also supports blacklisting or whitelisting individual items from showing up via separate `.json` based configuration files.
+### Minecraft 1.21.x
 
-Just as with the client config, all those files need to be put in `.minecraft/config/pickupnotifier/`. File names do not matter, name your custom configs however you like as long as the extension remains as `.json`.
+| Branch | Status | Changelog | Fabric | NeoForge |
+| --- | --- | --- | --- | --- |
+| [1.21.11](https://github.com/Fuzss/pick-up-notifier/tree/1.21.11) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.21.11/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier/files/all?version=1.21.11&gameVersionTypeId=4)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/pick-up-notifier/versions?g=1.21.11&l=fabric) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier/files/all?version=1.21.11&gameVersionTypeId=6)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/pick-up-notifier/versions?g=1.21.11&l=neoforge) |
 
-Those configs have three fields you can configure:
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.21.10](https://github.com/Fuzss/pick-up-notifier/tree/1.21.10) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.21.10/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| [1.21.8](https://github.com/Fuzss/pick-up-notifier/tree/1.21.8) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.21.8/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| [1.21.5](https://github.com/Fuzss/pick-up-notifier/tree/1.21.5) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.21.5/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| [1.21.4](https://github.com/Fuzss/pick-up-notifier/tree/1.21.4) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.21.4/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| [1.21.3](https://github.com/Fuzss/pick-up-notifier/tree/1.21.3) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.21.3/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| [1.21.1](https://github.com/Fuzss/pick-up-notifier/tree/1.21.1) | ✅&nbsp;Maintained | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.21.1/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
 
-| Key         | Type                 | Description                                                                                                                                                               | Mandatory | Default |
-|-------------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|---------|
-| `inverted`  | `boolean`            | Turns this whole file into a whitelist instead of blacklist.                                                                                                              | `false`   | `false` |
-| `dimension` | `ResourceLocation`   | Id of the dimension for this config to apply in. If left blank or absent this will be the general config for all dimension that do not already have their own config.     | `false`   | `""`    |
-| `items`     | `ResourceLocation[]` | The items to be included in the blacklist/whitelist. Format for every entry is `<namespace>:<path>`. Path may use asterisk as wildcard parameter. Tags are not supported. | `false`   | `[]`    |
+### Minecraft 1.20.x
 
-### Examples
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.20.4](https://github.com/Fuzss/pick-up-notifier/tree/1.20.4) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.20.4/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| [1.20.1](https://github.com/Fuzss/pick-up-notifier/tree/1.20.1) | ⚠️&nbsp;Bugfixes&nbsp;only | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.20.1/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| [1.20.0](https://github.com/Fuzss/pick-up-notifier/tree/1.20.0) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.20.0/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
 
-The config file below will show prevent stone, diorite, andesite and granite from showing in the pickup log in all dimensions that do not provide their own config. All other items are shown when picked up.
+### Minecraft 1.19.x
 
-So considering the two additional examples below, this behavior would not apply to the nether and end dimensions since dimensions with their own config file do not inherit behavior from the general config.
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.19.4](https://github.com/Fuzss/pick-up-notifier/tree/1.19.4) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.19.4/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| [1.19.3](https://github.com/Fuzss/pick-up-notifier/tree/1.19.3) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.19.3/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| [1.19.2](https://github.com/Fuzss/pick-up-notifier/tree/1.19.2) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.19.2/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
 
-```json
-{
-    "items": [
-        "minecraft:stone",
-        "minecraft:diorite",
-        "minecraft:andesite",
-        "minecraft:granite"
-    ]
-}
-```
+### Minecraft 1.18.x
 
-The config file below will only show netherrack, soul sand, soul soil, crimson nylium and warped nylium in the pickup log when in the nether dimension.
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.18.2](https://github.com/Fuzss/pick-up-notifier/tree/1.18.2) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.18.2/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
 
-```json
-{
-    "inverted": true,
-    "dimension": "minecraft:the_nether",
-    "items": [
-        "minecraft:netherrack",
-        "minecraft:soul_*",
-        "minecraft:*_nylium"
-    ]
-}
-```
+### Minecraft 1.17.x
 
-The config file below will prevent all pickups from being logged when in the end dimension.
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.17.1](https://github.com/Fuzss/pick-up-notifier/tree/1.17.1) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.17.1/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
 
-```json
-{
-    "inverted": true,
-    "dimension": "minecraft:the_end"
-}
-```
+### Minecraft 1.16.x
+
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.16.5](https://github.com/Fuzss/pick-up-notifier/tree/1.16.5) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.16.5/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+
+### Minecraft 1.15.x
+
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.15.2](https://github.com/Fuzss/pick-up-notifier/tree/1.15.2) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.15.2/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+
+### Minecraft 1.14.x
+
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.14.4](https://github.com/Fuzss/pick-up-notifier/tree/1.14.4) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.14.4/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+
+### Minecraft 1.13.x
+
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.13.2](https://github.com/Fuzss/pick-up-notifier/tree/1.13.2) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.13.2/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+
+### Minecraft 1.12.x
+
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.12.2](https://github.com/Fuzss/pick-up-notifier/tree/1.12.2) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.12.2/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+
+### Minecraft 1.11.x
+
+| Branch | Status | Changelog | Downloads |
+| --- | --- | --- | --- |
+| [1.11.2](https://github.com/Fuzss/pick-up-notifier/tree/1.11.2) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/pick-up-notifier/blob/1.11.2/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+
+---
+
+**✅&nbsp;Primary** — Latest version with active development and new features
+
+**✅&nbsp;Maintained** — Receives backports and selected new features
+
+**⚠️&nbsp;Bugfixes&nbsp;only** — Critical fixes and crash fixes only
+
+**❌&nbsp;Archived** — No longer updated

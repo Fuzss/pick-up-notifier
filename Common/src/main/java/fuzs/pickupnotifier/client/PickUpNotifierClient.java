@@ -2,11 +2,11 @@ package fuzs.pickupnotifier.client;
 
 import fuzs.pickupnotifier.PickUpNotifier;
 import fuzs.pickupnotifier.client.handler.DrawEntriesHandler;
-import fuzs.puzzleslib.api.client.core.v1.ClientModConstructor;
-import fuzs.puzzleslib.api.client.core.v1.context.GuiLayersContext;
-import fuzs.puzzleslib.api.client.event.v1.ClientTickEvents;
-import fuzs.puzzleslib.api.client.event.v1.entity.player.ClientPlayerCopyCallback;
-import fuzs.puzzleslib.api.client.event.v1.entity.player.ClientPlayerNetworkEvents;
+import fuzs.puzzleslib.common.api.client.core.v1.ClientModConstructor;
+import fuzs.puzzleslib.common.api.client.core.v1.context.GuiLayersContext;
+import fuzs.puzzleslib.common.api.client.event.v1.ClientTickEvents;
+import fuzs.puzzleslib.common.api.client.event.v1.entity.player.ClientPlayerCopyCallback;
+import fuzs.puzzleslib.common.api.client.event.v1.entity.player.ClientPlayerNetworkEvents;
 
 public class PickUpNotifierClient implements ClientModConstructor {
 

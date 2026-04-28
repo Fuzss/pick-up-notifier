@@ -1,9 +1,9 @@
 package fuzs.pickupnotifier.config;
 
-import fuzs.puzzleslib.api.config.v3.Config;
-import fuzs.puzzleslib.api.config.v3.ConfigCore;
-import fuzs.puzzleslib.api.config.v3.ValueCallback;
-import fuzs.puzzleslib.api.core.v1.ModLoaderEnvironment;
+import fuzs.puzzleslib.common.api.config.v3.Config;
+import fuzs.puzzleslib.common.api.config.v3.ConfigCore;
+import fuzs.puzzleslib.common.api.config.v3.ValueCallback;
+import fuzs.puzzleslib.common.api.core.v1.ModLoaderEnvironment;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class ServerConfig implements ConfigCore {

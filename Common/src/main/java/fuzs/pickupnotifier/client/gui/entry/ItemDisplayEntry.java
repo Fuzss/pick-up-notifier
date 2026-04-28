@@ -7,7 +7,7 @@ import fuzs.pickupnotifier.config.CombineEntries;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
@@ -65,7 +65,7 @@ public final class ItemDisplayEntry extends DisplayEntry<ItemStack> {
     }
 
     @Override
-    protected void renderSprite(GuiGraphics guiGraphics, Font font, int posX, int posY, float alpha) {
+    protected void renderSprite(GuiGraphicsExtractor guiGraphics, Font font, int posX, int posY, float alpha) {
         if (this.item.getPopTime() > 0) {
             DeltaTracker deltaTracker = Minecraft.getInstance().getDeltaTracker();
             float popTime = this.item.getPopTime() - deltaTracker.getGameTimeDeltaPartialTick(false);

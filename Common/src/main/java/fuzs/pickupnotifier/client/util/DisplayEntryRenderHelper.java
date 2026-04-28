@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableSortedMap;
 import fuzs.pickupnotifier.PickUpNotifier;
 import fuzs.pickupnotifier.config.ClientConfig;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -26,9 +26,9 @@ public class DisplayEntryRenderHelper {
 
     private static float itemStackAlpha = 1.0F;
 
-    public static void renderItem(GuiGraphics guiGraphics, ItemStack itemStack, int x, int y, float alpha) {
+    public static void renderItem(GuiGraphicsExtractor guiGraphics, ItemStack itemStack, int x, int y, float alpha) {
         itemStackAlpha = alpha;
-        guiGraphics.renderItem(itemStack, x, y);
+        guiGraphics.item(itemStack, x, y);
         itemStackAlpha = 1.0F;
     }
 
@@ -48,7 +48,7 @@ public class DisplayEntryRenderHelper {
         return Component.literal(String.valueOf(value / entry.getKey()) + entry.getValue());
     }
 
-    public static void renderGuiItemDecorations(GuiGraphics guiGraphics, Font font, int count, int xPosition, int yPosition, float alpha) {
+    public static void renderGuiItemDecorations(GuiGraphicsExtractor guiGraphics, Font font, int count, int xPosition, int yPosition, float alpha) {
 
         if (count <= 1 && !PickUpNotifier.CONFIG.get(ClientConfig.class).display.displaySingleCount) return;
 
@@ -60,16 +60,16 @@ public class DisplayEntryRenderHelper {
 
         float posX = (xPosition + 17) / scale - font.width(component);
         float posY = (yPosition + font.lineHeight * 2) / scale - font.lineHeight;
-        guiGraphics.drawString(font, component, (int) posX, (int) posY, ARGB.color(alpha, -1), true);
+        guiGraphics.text(font, component, (int) posX, (int) posY, ARGB.color(alpha, -1), true);
 
         guiGraphics.pose().popMatrix();
     }
 
     /**
-     * @see net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil#renderTooltipBackground(GuiGraphics,
+     * @see net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil#renderTooltipBackground(GuiGraphicsExtractor,
      *         int, int, int, int, int, Identifier)
      */
-    public static void renderTooltipBackground(GuiGraphics guiGraphics, int x, int y, int width, int height, int color) {
+    public static void renderTooltipBackground(GuiGraphicsExtractor guiGraphics, int x, int y, int width, int height, int color) {
         int i = x - 3 - 9;
         int j = y - 3 - 9;
         int k = width + 3 + 3 + 18;

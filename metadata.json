@@ -1,9 +1,10 @@
 {
+    "minecraft": "26.1.2",
     "mod": {
         "id": "pickupnotifier",
         "group": "fuzs.pickupnotifier",
         "name": "Pick Up Notifier",
-        "version": "21.11.0",
+        "version": "26.1.0",
         "authors": [
             "Fuzs"
         ],
@@ -36,13 +37,13 @@
     ],
     "links": [
         {
-            "name": "github",
-            "slug": "pickupnotifier"
-        },
-        {
             "name": "curseforge",
             "slug": "pick-up-notifier",
             "id": "351441"
+        },
+        {
+            "name": "github",
+            "slug": "pick-up-notifier"
         },
         {
             "name": "modrinth",

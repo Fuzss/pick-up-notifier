@@ -8,7 +8,7 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.navigation.ScreenAxis;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
@@ -63,7 +63,7 @@ public class DrawEntriesHandler {
         }
     }
 
-    public void renderPickUpEntries(GuiGraphics guiGraphics, DeltaTracker deltaTracker) {
+    public void renderPickUpEntries(GuiGraphicsExtractor guiGraphics, DeltaTracker deltaTracker) {
         if (this.collector.isEmpty()) {
             return;
         }

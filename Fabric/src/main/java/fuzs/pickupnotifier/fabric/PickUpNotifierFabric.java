@@ -2,7 +2,7 @@ package fuzs.pickupnotifier.fabric;
 
 import fuzs.pickupnotifier.PickUpNotifier;
 import fuzs.pickupnotifier.fabric.handler.FabricItemPickupHandler;
-import fuzs.puzzleslib.api.core.v1.ModConstructor;
+import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
 import fuzs.puzzleslib.fabric.api.event.v1.FabricPlayerEvents;
 import net.fabricmc.api.ModInitializer;
 

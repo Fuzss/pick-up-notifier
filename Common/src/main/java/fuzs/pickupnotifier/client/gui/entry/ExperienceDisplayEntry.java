@@ -6,7 +6,7 @@ import fuzs.pickupnotifier.config.ClientConfig;
 import fuzs.pickupnotifier.config.CombineEntries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.renderer.entity.state.ExperienceOrbRenderState;
@@ -47,7 +47,7 @@ public final class ExperienceDisplayEntry extends DisplayEntry<Component> {
     }
 
     @Override
-    protected void renderSprite(GuiGraphics guiGraphics, Font font, int posX, int posY, float alpha) {
+    protected void renderSprite(GuiGraphicsExtractor guiGraphics, Font font, int posX, int posY, float alpha) {
         int textureOffset = getXpTexture(this.getDisplayAmount());
         int textureX = textureOffset % 4 * 16;
         int textureY = textureOffset / 4 * 16;

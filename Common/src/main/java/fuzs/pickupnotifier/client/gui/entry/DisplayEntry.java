@@ -3,10 +3,10 @@ package fuzs.pickupnotifier.client.gui.entry;
 import fuzs.pickupnotifier.PickUpNotifier;
 import fuzs.pickupnotifier.client.util.DisplayEntryRenderHelper;
 import fuzs.pickupnotifier.config.ClientConfig;
-import fuzs.puzzleslib.api.item.v2.ItemHelper;
+import fuzs.puzzleslib.common.api.item.v2.ItemHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
@@ -115,7 +115,7 @@ public abstract class DisplayEntry<T> {
                 textWidth + (textWidth == 0 ? 0 : TEXT_ITEM_MARGIN) + 16 : textWidth;
     }
 
-    public void render(GuiGraphics guiGraphics, Font font, int posX, int posY, float alpha) {
+    public void render(GuiGraphicsExtractor guiGraphics, Font font, int posX, int posY, float alpha) {
         float scale = PickUpNotifier.CONFIG.get(ClientConfig.class).display.getDisplayScale();
         boolean mirrorPosition = PickUpNotifier.CONFIG.get(ClientConfig.class).display.position.isRight();
         boolean withSprite = PickUpNotifier.CONFIG.get(ClientConfig.class).display.drawSprite;
@@ -125,7 +125,7 @@ public abstract class DisplayEntry<T> {
         guiGraphics.pose().scale(scale, scale);
 
         this.renderBg(guiGraphics, font, posX, posY, alpha);
-        guiGraphics.drawString(font, this.component, textStartX, posY + 4, ARGB.white(alpha), true);
+        guiGraphics.text(font, this.component, textStartX, posY + 4, ARGB.white(alpha), true);
         if (withSprite) {
             int textWidth = font.width(this.component);
             this.renderSprite(guiGraphics,
@@ -138,7 +138,7 @@ public abstract class DisplayEntry<T> {
         guiGraphics.pose().popMatrix();
     }
 
-    private void renderBg(GuiGraphics guiGraphics, Font font, int posX, int posY, float alpha) {
+    private void renderBg(GuiGraphicsExtractor guiGraphics, Font font, int posX, int posY, float alpha) {
         switch (PickUpNotifier.CONFIG.get(ClientConfig.class).display.entryBackground) {
             case CHAT -> {
                 int backgroundOpacity = ARGB.color(ARGB.as8BitChannel(Mth.clamp(
@@ -163,7 +163,7 @@ public abstract class DisplayEntry<T> {
         }
     }
 
-    protected abstract void renderSprite(GuiGraphics guiGraphics, Font font, int posX, int posY, float alpha);
+    protected abstract void renderSprite(GuiGraphicsExtractor guiGraphics, Font font, int posX, int posY, float alpha);
 
     @Override
     public abstract boolean equals(Object obj);

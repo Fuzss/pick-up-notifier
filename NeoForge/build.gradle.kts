@@ -3,6 +3,5 @@ plugins {
 }
 
 dependencies {
-    modCompileOnly(sharedLibs.puzzleslib.common)
     modApi(sharedLibs.puzzleslib.neoforge)
 }

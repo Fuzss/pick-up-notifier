@@ -2,7 +2,7 @@ package fuzs.pickupnotifier.fabric.client;
 
 import fuzs.pickupnotifier.PickUpNotifier;
 import fuzs.pickupnotifier.client.PickUpNotifierClient;
-import fuzs.puzzleslib.api.client.core.v1.ClientModConstructor;
+import fuzs.puzzleslib.common.api.client.core.v1.ClientModConstructor;
 import net.fabricmc.api.ClientModInitializer;
 
 public class PickUpNotifierFabricClient implements ClientModInitializer {

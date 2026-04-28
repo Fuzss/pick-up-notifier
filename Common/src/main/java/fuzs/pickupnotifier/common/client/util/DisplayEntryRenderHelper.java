@@ -16,7 +16,13 @@ import java.util.Map;
 import java.util.NavigableMap;
 
 public class DisplayEntryRenderHelper {
+    /**
+     * @see net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil#BACKGROUND_SPRITE
+     */
     private static final Identifier BACKGROUND_SPRITE = Identifier.withDefaultNamespace("tooltip/background");
+    /**
+     * @see net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil#FRAME_SPRITE
+     */
     private static final Identifier FRAME_SPRITE = Identifier.withDefaultNamespace("tooltip/frame");
     private static final NavigableMap<Integer, Character> MAP = ImmutableSortedMap.<Integer, Character>naturalOrder()
             .put(1_000, 'K')
@@ -37,20 +43,18 @@ public class DisplayEntryRenderHelper {
     }
 
     private static MutableComponent shortenValue(int value) {
-
         Map.Entry<Integer, Character> entry = MAP.floorEntry(value);
-
         if (entry == null) {
-
             return Component.literal(String.valueOf(value));
+        } else {
+            return Component.literal(String.valueOf(value / entry.getKey()) + entry.getValue());
         }
-
-        return Component.literal(String.valueOf(value / entry.getKey()) + entry.getValue());
     }
 
     public static void renderGuiItemDecorations(GuiGraphicsExtractor guiGraphics, Font font, int count, int xPosition, int yPosition, float alpha) {
-
-        if (count <= 1 && !PickUpNotifier.CONFIG.get(ClientConfig.class).display.displaySingleCount) return;
+        if (count <= 1 && !PickUpNotifier.CONFIG.get(ClientConfig.class).display.displaySingleCount) {
+            return;
+        }
 
         guiGraphics.pose().pushMatrix();
 
@@ -66,15 +70,23 @@ public class DisplayEntryRenderHelper {
     }
 
     /**
-     * @see net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil#renderTooltipBackground(GuiGraphicsExtractor,
-     *         int, int, int, int, int, Identifier)
+     * Supports an additional color parameter (used for alpha).
+     *
+     * @see net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil#extractTooltipBackground(GuiGraphicsExtractor,
+     *         int, int, int, int, Identifier)
      */
-    public static void renderTooltipBackground(GuiGraphicsExtractor guiGraphics, int x, int y, int width, int height, int color) {
-        int i = x - 3 - 9;
-        int j = y - 3 - 9;
-        int k = width + 3 + 3 + 18;
-        int l = height + 3 + 3 + 18;
-        guiGraphics.blitSprite(RenderPipelines.GUI_TEXTURED, BACKGROUND_SPRITE, i, j, k, l, color);
-        guiGraphics.blitSprite(RenderPipelines.GUI_TEXTURED, FRAME_SPRITE, i, j, k, l, color);
+    public static void extractTooltipBackground(GuiGraphicsExtractor guiGraphics, int x, int y, int width, int height, int color) {
+        int x0 = x - 3 - 9;
+        int y0 = y - 3 - 9;
+        int paddedWidth = width + 3 + 3 + 18;
+        int paddedHeight = height + 3 + 3 + 18;
+        guiGraphics.blitSprite(RenderPipelines.GUI_TEXTURED,
+                BACKGROUND_SPRITE,
+                x0,
+                y0,
+                paddedWidth,
+                paddedHeight,
+                color);
+        guiGraphics.blitSprite(RenderPipelines.GUI_TEXTURED, FRAME_SPRITE, x0, y0, paddedWidth, paddedHeight, color);
     }
 }

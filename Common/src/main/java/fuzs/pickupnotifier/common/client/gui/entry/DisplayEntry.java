@@ -153,7 +153,7 @@ public abstract class DisplayEntry<T> {
                 guiGraphics.fill(posX - 3, posY, posX + this.getEntryWidth(font) + 5, endY, backgroundOpacity);
             }
             case TOOLTIP -> {
-                DisplayEntryRenderHelper.renderTooltipBackground(guiGraphics,
+                DisplayEntryRenderHelper.extractTooltipBackground(guiGraphics,
                         posX,
                         posY + 3,
                         this.getEntryWidth(font),

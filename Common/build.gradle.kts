@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    modCompileOnlyApi(libs.puzzleslib.common)
+    modCompileOnlyApi(sharedLibs.puzzleslib.common)
 }
 
 multiloader {

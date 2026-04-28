@@ -1,9 +1,9 @@
 package fuzs.pickupnotifier.neoforge.handler;
 
-import fuzs.pickupnotifier.PickUpNotifier;
-import fuzs.pickupnotifier.config.ServerConfig;
-import fuzs.pickupnotifier.network.ClientboundTakeItemMessage;
-import fuzs.pickupnotifier.network.ClientboundTakeItemStackMessage;
+import fuzs.pickupnotifier.common.PickUpNotifier;
+import fuzs.pickupnotifier.common.config.ServerConfig;
+import fuzs.pickupnotifier.common.network.ClientboundTakeItemMessage;
+import fuzs.pickupnotifier.common.network.ClientboundTakeItemStackMessage;
 import fuzs.puzzleslib.common.api.network.v4.MessageSender;
 import fuzs.puzzleslib.common.api.network.v4.PlayerSet;
 import net.minecraft.server.level.ServerPlayer;

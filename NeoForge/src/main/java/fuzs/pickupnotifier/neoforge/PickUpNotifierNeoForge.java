@@ -1,6 +1,6 @@
 package fuzs.pickupnotifier.neoforge;
 
-import fuzs.pickupnotifier.PickUpNotifier;
+import fuzs.pickupnotifier.common.PickUpNotifier;
 import fuzs.pickupnotifier.neoforge.handler.NeoForgeItemPickupHandler;
 import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
 import net.neoforged.bus.api.EventPriority;

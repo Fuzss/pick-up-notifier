@@ -1,8 +1,8 @@
 package fuzs.pickupnotifier.fabric.handler;
 
-import fuzs.pickupnotifier.PickUpNotifier;
-import fuzs.pickupnotifier.config.ServerConfig;
-import fuzs.pickupnotifier.network.ClientboundTakeItemMessage;
+import fuzs.pickupnotifier.common.PickUpNotifier;
+import fuzs.pickupnotifier.common.config.ServerConfig;
+import fuzs.pickupnotifier.common.network.ClientboundTakeItemMessage;
 import fuzs.puzzleslib.common.api.event.v1.core.EventResult;
 import fuzs.puzzleslib.common.api.network.v4.MessageSender;
 import fuzs.puzzleslib.common.api.network.v4.PlayerSet;

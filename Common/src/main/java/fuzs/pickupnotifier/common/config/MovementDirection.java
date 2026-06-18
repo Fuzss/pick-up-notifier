@@ -15,20 +15,20 @@ public enum MovementDirection {
         @Override
         public boolean move(ScreenAxis screenAxis) {
             return screenAxis == ScreenAxis.HORIZONTAL
-                    && !PickUpNotifier.CONFIG.get(ClientConfig.class).display.position.isHorizontalCenter();
+                    && !PickUpNotifier.CONFIG.get(ClientConfig.class).display.screenCorner.isHorizontalCenter();
         }
     },
     VERTICAL {
         @Override
         public boolean move(ScreenAxis screenAxis) {
             return screenAxis == ScreenAxis.VERTICAL
-                    && !PickUpNotifier.CONFIG.get(ClientConfig.class).display.position.isVerticalCenter();
+                    && !PickUpNotifier.CONFIG.get(ClientConfig.class).display.screenCorner.isVerticalCenter();
         }
     },
     ALL {
         @Override
         public boolean move(ScreenAxis screenAxis) {
-            return PickUpNotifier.CONFIG.get(ClientConfig.class).display.position != AnchorPoint.CENTER;
+            return PickUpNotifier.CONFIG.get(ClientConfig.class).display.screenCorner != AnchorPoint.CENTER;
         }
     };
 

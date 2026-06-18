@@ -77,14 +77,25 @@ public class ClientConfig implements ConfigCore {
     }
 
     public static class DisplayConfig implements ConfigCore {
-        public boolean drawSprite;
+        @Config(description = "Show a small sprite next to the name of each entry showing its contents.")
+        public boolean drawSprite = true;
         public ChatFormatting textColor;
-        public boolean ignoreRarity;
-        public AnchorPoint position;
-        public int offsetX;
-        public int offsetY;
-        public double maxHeight;
-        int displayScale;
+        @Config(description = "Ignore rarity when determining item name color.")
+        public boolean ignoreRarity = false;
+        @Config(description = "Screen corner for entry list to be drawn in.")
+        public AnchorPoint screenCorner = AnchorPoint.BOTTOM_RIGHT;
+        @Config(description = "Offset on x-axis from screen border.")
+        @Config.IntRange(min = 0)
+        public int offsetX = 8;
+        @Config(description = "Offset on y-axis from screen border.")
+        @Config.IntRange(min = 0)
+        public int offsetY = 4;
+        @Config(description = "Percentage of relative screen height entries are allowed to fill at max.")
+        @Config.DoubleRange(min = 0.0, max = 1.0)
+        public double maxHeight = 0.5;
+        @Config(description = "Scale of entries. A lower scale will make room for more rows to show. Works together with \"GUI Scale\" option in \"Video Settings\".")
+        @Config.IntRange(min = 1, max = 24)
+        int displayScale = 4;
         @Config(description = "Where and if to display the amount of items picked up. 'SPRITE' will render the amount on the item sprite like in inventories, 'TEXT' will add a dedicated text including the amount to the item name display.")
         public DisplayAmount displayAmount = DisplayAmount.TEXT;
         @Config(description = "Add the total amount of an item in your inventory to the entry.")
@@ -98,27 +109,12 @@ public class ClientConfig implements ConfigCore {
 
         @Override
         public void addToBuilder(ModConfigSpec.Builder builder, ValueCallback callback) {
-            callback.accept(builder.comment("Show a small sprite next to the name of each entry showing its contents.")
-                    .define("draw_sprite", true), v -> this.drawSprite = v);
-            callback.accept(builder.comment("Color of the entry name text.")
+            callback.accept(builder.comment("Color for the entry name text.")
                     .defineEnum("default_text_color",
                             ChatFormatting.WHITE,
                             Stream.of(ChatFormatting.values()).filter((ChatFormatting chatFormatting) -> {
                                 return TextColor.fromLegacyFormat(chatFormatting) != null;
                             }).collect(Collectors.toList())), v -> this.textColor = v);
-            callback.accept(builder.comment("Ignore rarity when determining item name color.")
-                    .define("ignore_rarity", false), v -> this.ignoreRarity = v);
-            callback.accept(builder.comment("Screen corner for entry list to be drawn in.")
-                    .defineEnum("screen_corner", AnchorPoint.BOTTOM_RIGHT), v -> this.position = v);
-            callback.accept(builder.comment("Offset on x-axis from screen border.")
-                    .defineInRange("offset_x", 8, 0, Integer.MAX_VALUE), v -> this.offsetX = v);
-            callback.accept(builder.comment("Offset on y-axis from screen border.")
-                    .defineInRange("offset_y", 4, 0, Integer.MAX_VALUE), v -> this.offsetY = v);
-            callback.accept(builder.comment("Percentage of relative screen height entries are allowed to fill at max.")
-                    .defineInRange("max_height", 0.5, 0.0, 1.0), v -> this.maxHeight = v);
-            callback.accept(builder.comment(
-                            "Scale of entries. A lower scale will make room for more rows to show. Works together with \"GUI Scale\" option in \"Video Settings\".")
-                    .defineInRange("display_scale", 4, 1, 24), v -> this.displayScale = v);
         }
 
         public float getDisplayScale() {

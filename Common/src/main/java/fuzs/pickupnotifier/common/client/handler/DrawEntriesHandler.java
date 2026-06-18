@@ -74,7 +74,7 @@ public class DrawEntriesHandler {
         int screenWidth = (int) (guiGraphics.guiWidth() / scale);
         int screenHeight = (int) (guiGraphics.guiHeight() / scale);
 
-        AnchorPoint anchorPoint = PickUpNotifier.CONFIG.get(ClientConfig.class).display.position;
+        AnchorPoint anchorPoint = PickUpNotifier.CONFIG.get(ClientConfig.class).display.screenCorner;
         Collection<DisplayEntry<?>> values = this.collector.values();
         if (!anchorPoint.isTop()) {
             values = new ArrayList<>(values).reversed();

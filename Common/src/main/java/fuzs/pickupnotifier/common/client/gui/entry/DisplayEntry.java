@@ -57,7 +57,7 @@ public abstract class DisplayEntry<T> {
     }
 
     protected final Component createTextComponent() {
-        boolean reverse = PickUpNotifier.CONFIG.get(ClientConfig.class).display.position.isRight();
+        boolean reverse = PickUpNotifier.CONFIG.get(ClientConfig.class).display.screenCorner.isRight();
         List<Component> components = new ArrayList<>();
         this.appendTextComponents(components, reverse);
         if (reverse) {
@@ -117,7 +117,7 @@ public abstract class DisplayEntry<T> {
 
     public void render(GuiGraphicsExtractor guiGraphics, Font font, int posX, int posY, float alpha) {
         float scale = PickUpNotifier.CONFIG.get(ClientConfig.class).display.getDisplayScale();
-        boolean mirrorPosition = PickUpNotifier.CONFIG.get(ClientConfig.class).display.position.isRight();
+        boolean mirrorPosition = PickUpNotifier.CONFIG.get(ClientConfig.class).display.screenCorner.isRight();
         boolean withSprite = PickUpNotifier.CONFIG.get(ClientConfig.class).display.drawSprite;
         int textStartX = mirrorPosition || !withSprite ? posX : posX + 16 + TEXT_ITEM_MARGIN;
 

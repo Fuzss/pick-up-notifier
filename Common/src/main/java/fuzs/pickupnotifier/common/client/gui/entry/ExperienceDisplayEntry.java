@@ -6,9 +6,10 @@ import fuzs.pickupnotifier.common.config.ClientConfig;
 import fuzs.pickupnotifier.common.config.CombineEntries;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.state.ExperienceOrbRenderState;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.ARGB;
@@ -86,8 +87,8 @@ public final class ExperienceDisplayEntry extends DisplayEntry<Component> {
     }
 
     /**
-     * @see net.minecraft.client.renderer.entity.ExperienceOrbRenderer#render(ExperienceOrbRenderState, PoseStack,
-     *         MultiBufferSource, int)
+     * @see net.minecraft.client.renderer.entity.ExperienceOrbRenderer#submit(ExperienceOrbRenderState, PoseStack,
+     *         SubmitNodeCollector, CameraRenderState)
      */
     private static int getExperienceOrbColor(float ageInTicks, int alpha) {
         int red = ARGB.as8BitChannel((Mth.sin(ageInTicks) + 1.0F) * 0.5F);

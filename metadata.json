@@ -1,10 +1,10 @@
 {
-    "minecraft": "26.1.2",
+    "minecraft": "26.2",
     "mod": {
         "id": "pickupnotifier",
         "group": "fuzs.pickupnotifier",
         "name": "Pick Up Notifier",
-        "version": "26.1.0",
+        "version": "26.2.0",
         "authors": [
             "Fuzs"
         ],

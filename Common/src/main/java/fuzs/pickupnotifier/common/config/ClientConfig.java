@@ -1,5 +1,6 @@
 package fuzs.pickupnotifier.common.config;
 
+import fuzs.puzzleslib.common.api.client.gui.v2.AnchorPoint;
 import fuzs.puzzleslib.common.api.config.v3.Config;
 import fuzs.puzzleslib.common.api.config.v3.ConfigCore;
 import fuzs.puzzleslib.common.api.config.v3.ValueCallback;
@@ -7,6 +8,7 @@ import fuzs.puzzleslib.common.api.config.v3.serialization.ConfigDataSet;
 import fuzs.puzzleslib.common.api.config.v3.serialization.KeyedValueProvider;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
@@ -42,7 +44,7 @@ public class ClientConfig implements ConfigCore {
         @Config(name = "hidden_items", description = {
                 "Disable specific items or content from whole mods from showing.", ConfigDataSet.CONFIG_DESCRIPTION
         })
-        List<String> hiddenItemsRaw = KeyedValueProvider.tagAppender(Registries.ITEM).asStringList();
+        List<String> hiddenItemsRaw = KeyedValueProvider.<Item>tags().asStringList();
 
         public ConfigDataSet<Item> hiddenItems;
 
@@ -62,7 +64,7 @@ public class ClientConfig implements ConfigCore {
                 "Make outdated entries slowly move out of the screen.",
                 "Not necessarily supported by all position presets."
         })
-        public MoveOut moveOut = MoveOut.VERTICALLY_ONLY;
+        public MovementDirection moveOut = MovementDirection.VERTICAL;
         @Config(description = "Amount of ticks it takes for an entry to move out of the screen.")
         @Config.IntRange(min = 0)
         int moveTime = 20;
@@ -101,9 +103,9 @@ public class ClientConfig implements ConfigCore {
             callback.accept(builder.comment("Color of the entry name text.")
                     .defineEnum("default_text_color",
                             ChatFormatting.WHITE,
-                            Stream.of(ChatFormatting.values())
-                                    .filter(ChatFormatting::isColor)
-                                    .collect(Collectors.toList())), v -> this.textColor = v);
+                            Stream.of(ChatFormatting.values()).filter((ChatFormatting chatFormatting) -> {
+                                return TextColor.fromLegacyFormat(chatFormatting) != null;
+                            }).collect(Collectors.toList())), v -> this.textColor = v);
             callback.accept(builder.comment("Ignore rarity when determining item name color.")
                     .define("ignore_rarity", false), v -> this.ignoreRarity = v);
             callback.accept(builder.comment("Screen corner for entry list to be drawn in.")

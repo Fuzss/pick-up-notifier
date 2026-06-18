@@ -1,30 +1,31 @@
 package fuzs.pickupnotifier.common.config;
 
 import fuzs.pickupnotifier.common.PickUpNotifier;
+import fuzs.puzzleslib.common.api.client.gui.v2.AnchorPoint;
 import net.minecraft.client.gui.navigation.ScreenAxis;
 
-public enum MoveOut {
-    DISABLED {
+public enum MovementDirection {
+    NONE {
         @Override
         public boolean move(ScreenAxis screenAxis) {
             return false;
         }
     },
-    HORIZONTALLY_ONLY {
+    HORIZONTAL {
         @Override
         public boolean move(ScreenAxis screenAxis) {
             return screenAxis == ScreenAxis.HORIZONTAL
                     && !PickUpNotifier.CONFIG.get(ClientConfig.class).display.position.isHorizontalCenter();
         }
     },
-    VERTICALLY_ONLY {
+    VERTICAL {
         @Override
         public boolean move(ScreenAxis screenAxis) {
             return screenAxis == ScreenAxis.VERTICAL
                     && !PickUpNotifier.CONFIG.get(ClientConfig.class).display.position.isVerticalCenter();
         }
     },
-    ENABLED {
+    ALL {
         @Override
         public boolean move(ScreenAxis screenAxis) {
             return PickUpNotifier.CONFIG.get(ClientConfig.class).display.position != AnchorPoint.CENTER;

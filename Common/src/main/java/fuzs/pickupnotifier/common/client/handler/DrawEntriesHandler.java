@@ -2,8 +2,8 @@ package fuzs.pickupnotifier.common.client.handler;
 
 import fuzs.pickupnotifier.common.PickUpNotifier;
 import fuzs.pickupnotifier.common.client.gui.entry.DisplayEntry;
-import fuzs.pickupnotifier.common.config.AnchorPoint;
 import fuzs.pickupnotifier.common.config.ClientConfig;
+import fuzs.puzzleslib.common.api.client.gui.v2.AnchorPoint;
 import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;

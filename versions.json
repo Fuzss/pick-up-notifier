@@ -1,9 +1,16 @@
 {
   "branches": {
-    "1.21.11": "archived",
-    "1.21.1": "maintained",
     "1.20.1": "fixes",
+    "1.21.1": "maintained",
+    "1.21.11": "archived",
     "26.1.x": "maintained",
     "26.2.x": "primary"
+  },
+  "properties": {
+    "distributions.curseforge.id": "351441",
+    "distributions.curseforge.slug": "pick-up-notifier",
+    "distributions.github.slug": "pick-up-notifier",
+    "distributions.modrinth.id": "ZX66K16c",
+    "distributions.modrinth.slug": "pick-up-notifier"
   }
 }

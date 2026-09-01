@@ -6,11 +6,17 @@
     "26.1.x": "maintained",
     "26.2.x": "primary"
   },
-  "properties": {
-    "distributions.curseforge.id": "351441",
-    "distributions.curseforge.slug": "pick-up-notifier",
-    "distributions.github.slug": "pick-up-notifier",
-    "distributions.modrinth.id": "ZX66K16c",
-    "distributions.modrinth.slug": "pick-up-notifier"
+  "distributions": {
+    "curseforge": {
+      "id": "351441",
+      "slug": "pick-up-notifier"
+    },
+    "github": {
+      "slug": "pick-up-notifier"
+    },
+    "modrinth": {
+      "id": "ZX66K16c",
+      "slug": "pick-up-notifier"
+    }
   }
 }
